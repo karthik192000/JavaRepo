@@ -36,7 +36,7 @@ public class SwaggerConfig {
 		      "Endpoints related to EmployeePortal",
 		      "v1.0",
 		      null,
-		      "Deepak Ray",
+		      "Karthik Bankapur",
 		      null,
 		      null);
 		    return apiInfo;
