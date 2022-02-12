@@ -6,7 +6,6 @@ package com.bfdltraining.crud.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.google.common.base.Predicate;
 
 import springfox.documentation.RequestHandler;
 import springfox.documentation.builders.PathSelectors;
@@ -23,8 +22,8 @@ public class SwaggerConfig {
 	    public Docket api() { 
 	        return new Docket(DocumentationType.SWAGGER_2)  
 	          .select()                                  
-	          .apis( (Predicate<RequestHandler>) RequestHandlerSelectors.basePackage("com.bfdltraining.crud.controller"))              
-	          .paths((Predicate<String>) PathSelectors.any())
+	          .apis(  RequestHandlerSelectors.basePackage("com.bfdltraining.crud.controller"))              
+	          .paths(PathSelectors.any())
 	          .build()
 	          .apiInfo(apiInfo()).useDefaultResponseMessages(false);                                           
 	    }
@@ -32,8 +31,8 @@ public class SwaggerConfig {
 	 private ApiInfo apiInfo() {
 		    @SuppressWarnings("deprecation")
 			ApiInfo apiInfo = new ApiInfo(
-		      "EmployeePortalService",
-		      "Endpoints related to EmployeePortal",
+		      "E-Commerce Spring Crud Api ",
+		      "Endpoints related to E-commerce api",
 		      "v1.0",
 		      null,
 		      "Karthik Bankapur",
