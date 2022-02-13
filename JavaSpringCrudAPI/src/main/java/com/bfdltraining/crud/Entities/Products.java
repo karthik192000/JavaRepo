@@ -2,8 +2,10 @@ package com.bfdltraining.crud.Entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "products")
 public class Products {
 
 	@Id
